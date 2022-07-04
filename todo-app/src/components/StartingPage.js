@@ -1,6 +1,18 @@
 import "../App.css";
-import { useState } from "react";
+import { useState, createContext } from "react";
 import { useNavigate } from "react-router-dom";
+
+const UsernameContext = createContext();
+
+function UsernameProvider(props) {
+  const username = props.name;
+  return (
+    <UsernameContext.Provider value={username}>
+      {props.children}
+    </UsernameContext.Provider>
+  );
+}
+export { UsernameContext, UsernameProvider };
 
 export default function StartingPage() {
   const [name, setName] = useState("");
@@ -11,6 +23,7 @@ export default function StartingPage() {
 
   const handleNameChange = (event) => {
     setName(event.target.value);
+    UsernameContext(name);
     console.log(name);
   };
 

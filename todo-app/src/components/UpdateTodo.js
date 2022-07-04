@@ -1,3 +1,15 @@
+import "../App.css";
+import TopNav from "./TopNav";
+import Footer from "./Footer";
+import BackButton from "./BackButton";
+
 export default function UpdateTodo() {
-  return <h1 id="center-demo-div">UpdateTodo</h1>;
+  return (
+    <>
+      <TopNav />
+      <BackButton />
+      <Footer />
+      <h1 className="dashboard-body">UpdateTodo</h1>;
+    </>
+  );
 }
