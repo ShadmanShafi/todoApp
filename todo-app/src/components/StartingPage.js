@@ -1,10 +1,13 @@
 import "../App.css";
 import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export default function Login() {
+export default function StartingPage() {
   const [name, setName] = useState("");
   let navigate = useNavigate();
+
+  const formIsValid = name.trim().length > 0;
+  console.log(formIsValid);
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -13,18 +16,15 @@ export default function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    navigate("/dashboard");
+    if (formIsValid) navigate("/dashboard");
   };
-
-  const formIsValid = name.trim().length > 0;
-  console.log(formIsValid);
 
   return (
     <>
-      <div>
+      <div id="center-div">
         <h3>Simple ToDo</h3>
         <form onSubmit={handleSubmit}>
-          <div>
+          <div id="starting-page-div">
             <label>
               <input
                 id="input-name"

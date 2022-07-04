@@ -1,6 +1,18 @@
-div {
+#center-div {
   font-family: Arial, Helvetica, sans-serif;
-  padding: 120px 0 0 0;
+  padding: 200px 0 0 0;
+  text-align: center;
+}
+
+#center-dashboard-body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 0 0 0;
+  text-align: center;
+}
+
+#center-demo-div {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 0 0 0;
   text-align: center;
 }
 
@@ -29,4 +41,58 @@ div {
   margin: 30px 0px;
   border: none;
   cursor: pointer;
+}
+
+li {
+  float: left;
+  display: block;
+  padding: 8px 8px 0 8px;
+}
+
+#title-padding {
+  padding: 0 60em 0px 6em;
+}
+
+#logout-btn-padding {
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: underline;
+  padding: 10px 10px 0px 10px;
+  margin-top: 10px;
+  margin-left: 8em;
+  background: none;
+  border: none;
+  color: #239eea;
+  font-style: underline;
+  cursor: pointer;
+}
+
+.navbar-top {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  left: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.log-out {
+  background: none;
+  border: none;
+  color: #239eea;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  width: 100%;
+  top: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

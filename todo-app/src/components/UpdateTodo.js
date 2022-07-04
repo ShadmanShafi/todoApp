@@ -1,3 +1,3 @@
 export default function UpdateTodo() {
-    return <h1>UpdateTodo</h1>
+  return <h1 id="center-demo-div">UpdateTodo</h1>;
 }

@@ -1,3 +1,3 @@
 export default function CreateTodo() {
-    return <h1>CreateTodo</h1>
+  return <h1 id="center-demo-div">CreateTodo</h1>;
 }

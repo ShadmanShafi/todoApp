@@ -3,7 +3,7 @@ import StartingPage from "./components/StartingPage.js";
 import Dashboard from "./components/Dashboard.js";
 import CreateTodo from "./components/CreateTodo";
 import UpdateTodo from "./components/UpdateTodo";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // <nav>
 //   <ul>
