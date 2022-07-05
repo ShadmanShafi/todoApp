@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { TodoContext } from "../context/Index";
 
-export default function StartingPage() {
+export default function HomePage() {
   let navigate = useNavigate();
   const { contextState, setContextState } = useContext(TodoContext);
 

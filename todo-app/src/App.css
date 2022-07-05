@@ -110,11 +110,11 @@ li {
 
 .dashboard-body {
   font-family: Arial, Helvetica, sans-serif;
-  position: absolute;
+  position: relative;
   width: 60%;
-  top: 25%;
-  left: 0;
+  margin-top: 12%;
   left: 20%;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -132,10 +132,9 @@ li {
 .dashboard-list-item {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #eeeeee;
-  position: absolute;
+  position: relative;
   width: 51%;
   height: 55px;
-  top: 35%;
   left: 23%;
   padding-left: 10px;
   display: flex;

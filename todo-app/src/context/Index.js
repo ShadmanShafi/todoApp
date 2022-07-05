@@ -5,7 +5,15 @@ const TodoContext = createContext({});
 function TodoProvider(props) {
   const [contextState, setContextState] = useState({
     userName: "",
-    todos: [],
+    todos: [
+      {
+        id: 0,
+        title: "",
+        description: "",
+        isCompleted: false,
+        createdAt: "",
+      },
+    ],
   });
 
   return (
