@@ -1,30 +1,17 @@
 import "../App.css";
-import { useState, createContext } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-
-const UsernameContext = createContext();
-
-function UsernameProvider(props) {
-  const username = props.name;
-  return (
-    <UsernameContext.Provider value={username}>
-      {props.children}
-    </UsernameContext.Provider>
-  );
-}
-export { UsernameContext, UsernameProvider };
+import { TodoContext } from "../context/Index";
 
 export default function StartingPage() {
-  const [name, setName] = useState("");
   let navigate = useNavigate();
+  const {contextState, setContextState} = useContext(TodoContext);
 
-  const formIsValid = name.trim().length > 0;
-  console.log(formIsValid);
 
-  const handleNameChange = (event) => {
-    setName(event.target.value);
-    UsernameContext(name);
-    console.log(name);
+  const formIsValid = contextState.userName.trim().length > 0;
+
+  const handleNameChange = (e) => {
+    setContextState({...contextState, userName: e.target.value})
   };
 
   const handleSubmit = (event) => {

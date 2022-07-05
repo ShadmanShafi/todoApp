@@ -4,11 +4,11 @@ import Dashboard from "./components/Dashboard.js";
 import CreateTodo from "./components/CreateTodo";
 import UpdateTodo from "./components/UpdateTodo";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { UsernameProvider } from "./components/StartingPage";
+import { TodoProvider } from "./context/Index.js";
 
 function App() {
   return (
-    <UsernameProvider>
+    <TodoProvider>
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<StartingPage />} />
@@ -17,7 +17,7 @@ function App() {
           <Route exact path="/update" element={<UpdateTodo />} />
         </Routes>
       </BrowserRouter>
-    </UsernameProvider>
+    </TodoProvider>
   );
 }
 
