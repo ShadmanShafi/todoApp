@@ -14,11 +14,15 @@ export default function TopNav(props) {
 
   return (
     <div className="navbar-top">
-      <h3 className="titlesimple">Simple ToDo</h3>
-      <h3>Username</h3>
-      <button className="log-out" onClick={handleLogout}>
-        Log out
-      </button>
+      <div>
+        <h3>Simple ToDo</h3>
+      </div>
+      <div className="navbar-side">
+        <h3 className="padding-right">Username</h3>
+        <button className="log-out" onClick={handleLogout}>
+          Log out
+        </button>
+      </div>
     </div>
   );
 }
