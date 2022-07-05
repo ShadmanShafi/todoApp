@@ -1,17 +1,15 @@
 import React, { createContext, useState } from "react";
 
-
-const TodoContext = createContext({
-});
+const TodoContext = createContext({});
 
 function TodoProvider(props) {
   const [contextState, setContextState] = useState({
     userName: "",
-    todos: []
+    todos: [],
   });
 
   return (
-    <TodoContext.Provider value={{ contextState, setContextState}}>
+    <TodoContext.Provider value={{ contextState, setContextState }}>
       {props.children}
     </TodoContext.Provider>
   );

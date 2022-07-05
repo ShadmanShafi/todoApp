@@ -19,7 +19,7 @@ export default function Dashboard() {
       <TopNav />
       <Footer />
       <div className="dashboard-body">
-        <h3>My ToDos</h3>
+        <h4>My ToDos</h4>
         <button
           className="create-new padding-update"
           onClick={handleUpdateTodo}
@@ -35,6 +35,7 @@ export default function Dashboard() {
         <p className="padding-text">First Todo</p>
         <p className="padding-date">Date</p>
         <p className="padding-box">Box</p>
+        <button class="tick"></button>
       </div>
     </>
   );

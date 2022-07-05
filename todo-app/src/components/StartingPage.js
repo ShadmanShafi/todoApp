@@ -5,13 +5,12 @@ import { TodoContext } from "../context/Index";
 
 export default function StartingPage() {
   let navigate = useNavigate();
-  const {contextState, setContextState} = useContext(TodoContext);
-
+  const { contextState, setContextState } = useContext(TodoContext);
 
   const formIsValid = contextState.userName.trim().length > 0;
 
   const handleNameChange = (e) => {
-    setContextState({...contextState, userName: e.target.value})
+    setContextState({ ...contextState, userName: e.target.value });
   };
 
   const handleSubmit = (event) => {
@@ -34,7 +33,7 @@ export default function StartingPage() {
                 onChange={handleNameChange}
               />
             </label>
-            {!formIsValid && <p id="required-alert">Name is required</p>}
+            {!formIsValid && <p className="required-alert">Name is required</p>}
           </div>
           <input
             disabled={!formIsValid}

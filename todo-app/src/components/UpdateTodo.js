@@ -9,7 +9,7 @@ export default function UpdateTodo() {
       <TopNav />
       <BackButton />
       <Footer />
-      <h1 className="dashboard-body">UpdateTodo</h1>;
+      <h4 className="dashboard-body">UpdateTodo</h4>;
     </>
   );
 }
