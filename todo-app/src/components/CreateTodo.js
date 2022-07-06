@@ -1,5 +1,5 @@
 import "../App.css";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { TodoContext } from "../context/Index";
 import { useNavigate } from "react-router-dom";
 import TopNav from "./TopNav";
@@ -9,18 +9,12 @@ import BackButton from "./BackButton";
 export default function CreateTodo() {
   let navigate = useNavigate();
   const { contextState, setContextState } = useContext(TodoContext);
+  const [title, setTitle] = useState("");
+  const [descripton, setDescription] = useState("");
 
   function handleTitleChange(e) {
-    setContextState({
-      ...contextState,
-      todos: {
-        id: 1,
-        title: e.target.value,
-        description: "desc",
-        isCompleted: "false",
-        createdAt: "n0w",
-      },
-    });
+    setTitle(e.target.value);
+    console.log(contextState.todos);
   }
 
   function handleDescriptionChange(e) {
@@ -41,6 +35,10 @@ export default function CreateTodo() {
   function handleFormSubmit(e) {
     e.preventDefault();
 
+    setContextState({
+      ...contextState,
+        
+    })
     //Validate
     navigate("/dashboard");
   }
@@ -57,6 +55,7 @@ export default function CreateTodo() {
           <input
             className="create-input"
             placeholder="Enter title here"
+            value={title}
             onChange={handleTitleChange}
           ></input>
           <h6 className="create-error create-element">Title is required</h6>
@@ -66,7 +65,9 @@ export default function CreateTodo() {
             placeholder="Enter description here"
             onChange={handleDescriptionChange}
           ></textarea>
-          <button className="submit-newtodo-btn">Create</button>
+          <button className="submit-newtodo-btn">
+            Create
+          </button>
         </div>
       </form>
     </>
